@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pourquoi choisir cette thérapie</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thérapeute Familiale</h1>
+        <p>Isabelle Andreini</p>
+    </header>
+    <img src="header-image.jpg" alt="Image d'en-tête" class="header-image">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentation.html">La thérapie sytémique</a></li>
+            <li><a href="pourquoi.html">Pourquoi choisir la thérapie systémique ?</a></li>
+            <li><a href="therapeute.html">Votre thérapeute</a></li> <!-- Ajoutez le lien vers la nouvelle page -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h2>Pourquoi choisir la thérapie systémique ?</h2>
+
+        <p>
+            Nous sommes tous issu d’une lignée familiale : parents, grands-parents, ascendants… avec son histoire, ses codes, ses valeurs, ses croyances transmis de génération en génération. Cet héritage influence notre vie sans que nous en ayons conscience. 
+            Ces transmissions, visibles ou invisibles, peuvent nous bloquer, faire barrage à un moment donné dans l’évolution de notre vie, entraîner différents troubles comme un mal être, des répétitions de problèmes, des comportements inadaptés, des conflits et bien d’autres symptômes.
+            En prenant en compte toutes ces nouvelles informations, la thérapie systémique permet à la personne d’avoir un angle de vue plus large et de voir un champ des possibles. 
+            C’est une thérapie qui se veut brève, où le patient est acteur du processus autant que le thérapeute.
+
+        </p>
+
+        <!-- Liste de liens stylisés comme boutons en ligne, alignés horizontalement -->
+        <ul class="presentation-links">
+            <li><a class="button-link" href="#section1">Approche centrée sur les solutions</a></li>
+            <li><a class="button-link" href="#section2">La psycho traumatologie</a></li>
+            <li><a class="button-link" href="#section3">Pourquoi me rencontrer ?</a></li>
+            <li><a class="button-link" href="#section4">Déroulement d'une séance</a></li>
+        </ul>
+
+        <div id="section1" class="presentation-section">
+            <h3>Approche centrée solutions </h3>
+            <p>La systémie est une approche qui prend en compte l’individu dans son environnement et le contexte dans lequel il vit. On parle alors :</p>
+                <ul>
+                    <li>de systèmes : familial/social/de travail… </li>
+                    <li>et de sous-systèmes : couple/fratrie/collègues/hiérarchie…</li>
+                </ul>
+                <p>La place, les rôles que nous occupons, influencent notre comportement et certains fonctionnements. Toute cette dynamique est prise en compte par le thérapeute ce qui permet une vision plus élargie et facilite la compréhension du problème. A partir de là, grâce à un travail en commun, le patient et le thérapeute vont pouvoir envisager des perspectives différentes et explorer des pistes pour trouver des solutions afin que le système retrouve un équilibre pour lui permettre d’avancer.
+                </p>
+        </div>
+
+        <div id="section2" class="presentation-section">
+            <h3>La psycho traumatologie </h3>
+            <p>La thérapie systémique a différentes approches.
+            J’ai choisi de me former à l’approche centrée solutions des techniques d’entretien particulières et à l’utilisation d’outils pratiques et métaphoriques afin d’amener le patient à retrouver une certaine sécurité et reprendre confiance en lui.<br><br>
+            Les points d’encrages sont les compétences et les ressources propres à chacun d’entre nous, dont nous nous déconnectons lorsque nous traversons des moments douloureux. L’ACS permet de se reconnecter, de remobiliser nos forces pour redevenir maître de notre vie.
+            En proposant des exercices à effectuer entre les séances, le thérapeute encourage le changement avec des actions concrètes permettant au patient d’expérimenter des pistes et d’avancer à son rythme.
+</p>
+        </div>
+
+        <div id="section3" class="presentation-section">
+            <h3>Section 3</h3>
+            <p>Je peux accompagner toutes personnes ayant vécu un traumatisme, récent ou plus ancien. Les techniques utilisées permettent d’accompagner en toute sécurité, sans que le patient soit obligé de nommer son trauma. Le travail se fait au travers des émotions, des ressentis du corps, des visualisations positives pour accéder à une stabilité émotionnelle et retrouver une harmonie.</p>
+        </div>
+        <div id="section4" class="presentation-section">
+            <h3>Section 3</h3>
+            <p>Contenu de la section 3...</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Isabelle Andreini
+    </footer>
+
+    <script>
+        // JavaScript pour masquer ou afficher les sections de présentation
+        const sections = document.querySelectorAll('.presentation-section');
+
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        // Écouteurs d'événements pour les liens de section
+        const sectionLinks = document.querySelectorAll('.presentation-links a');
+
+        sectionLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetSectionId = event.target.getAttribute('href').substring(1);
+                showSection(targetSectionId);
+            });
+        });
+
+        // Afficher la première section par défaut
+        showSection('section1');
+    </script>
+</body>
+</html>

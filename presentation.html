@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation de la Thérapie</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thérapeute Familiale</h1>
+        <p>Isabelle Andreini</p>
+    </header>
+    <img src="header-image.jpg" alt="Image d'en-tête" class="header-image">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentation.html">La thérapie sytémique</a></li>
+            <li><a href="pourquoi.html">Pourquoi choisir la thérapie systémique ?</a></li>
+            <li><a href="therapeute.html">Votre thérapeute</a></li> <!-- Ajoutez le lien vers la nouvelle page -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h2>Présentation de la Thérapie</h2>
+
+        <div id="section1" class="presentation-section">
+            <h3>Qu'est-ce que la systémie</h3>
+            <p>La systémie est une approche qui prend en compte l’individu dans son environnement et le contexte dans lequel il vit. On parle alors :</p>
+                <ul>
+                    <li>de systèmes : familial/social/de travail… </li>
+                    <li>et de sous-systèmes : couple/fratrie/collègues/hiérarchie…</li>
+                </ul>
+                <p>La place, les rôles que nous occupons, influencent notre comportement et certains fonctionnements. Toute cette dynamique est prise en compte par le thérapeute ce qui permet une vision plus élargie et facilite la compréhension du problème. A partir de là, grâce à un travail en commun, le patient et le thérapeute vont pouvoir envisager des perspectives différentes et explorer des pistes pour trouver des solutions afin que le système retrouve un équilibre pour lui permettre d’avancer.
+                </p>
+        </div>
+
+        <div id="section2" class="presentation-section">
+            <h3>Pourquoi choisir la thérapie systémique ?</h3>
+            <p>Contenu de la section 2...</p>
+        </div>
+
+        <div id="section3" class="presentation-section">
+            <h3>Section 3</h3>
+            <p>Contenu de la section 3...</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Isabelle Andreini
+    </footer>
+
+    <script>
+        // JavaScript pour masquer ou afficher les sections de présentation
+        const sections = document.querySelectorAll('.presentation-section');
+
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        // Écouteurs d'événements pour les liens de section
+        const sectionLinks = document.querySelectorAll('.presentation-links a');
+
+        sectionLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetSectionId = event.target.getAttribute('href').substring(1);
+                showSection(targetSectionId);
+            });
+        });
+
+        // Afficher la première section par défaut
+        showSection('section1');
+    </script>
+</body>
+</html>

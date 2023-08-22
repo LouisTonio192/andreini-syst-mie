@@ -77,7 +77,7 @@ main {
 
 .button-link {
     padding: 10px 20px;
-    background-color: #FF6B6B; /* Rouge pastel */
+    background-color: #d7c6e6 ; /* Couleur parme */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -85,7 +85,7 @@ main {
 }
 
 .button-link:hover {
-    background-color: #FF4F4F; /* Rouge pastel un peu plus foncé au survol */
+    background-color: #BF9BDE; /* Couleur parme un peu plus foncé au survol */
 }
 
 /* Styles pour le pied de page */
@@ -169,4 +169,45 @@ footer {
     height: auto;
     border-radius: 10px;
     margin-right: 20px; /* Espace entre l'image et le texte */
+}
+/* Styles pour le conteneur de la carte */
+.contact-map-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour la carte */
+.contact-map {
+    /* Ajustez la hauteur de la carte selon vos besoins */
+    width: 100%;
+    height: 400px;
+}
+/* Styles pour le conteneur du formulaire */
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Styles pour le formulaire de contact à gauche */
+.contact-form {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Styles pour le conteneur de la carte à droite */
+.contact-map-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour la carte dans la partie droite (centrée) */
+.contact-map {
+    /* Ajustez la hauteur de la carte selon vos besoins */
+    width:50%;
+    height: 400px;
 }
